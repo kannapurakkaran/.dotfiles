@@ -3,7 +3,8 @@
     "position": "top",
     "height": 34,
     "spacing": 4,
-        
+    // Choose semi-transparent background in CSS, not here
+    
     // --- LAYOUT ---
     "modules-left": [
         "custom/arch",
@@ -38,7 +39,7 @@
 
     },
     "custom/weather": {
-	    "exec": "~/.config/waybar/scripts/weather.sh",
+	    "exec": "~/.config/waybar/weather.sh",
         "return-type": "custom",
         "interval": 1800, // Updates every 30 minutes
         "format": "{}",
@@ -66,7 +67,7 @@
         "scroll-step": 5 // Controls volume on scroll
     },
     "custom/power": {
-        "format": "   ",
+        "format": "  ",
         "tooltip": false,
         "on-click": "wlogout -p layer-shell -b 2" // Triggers a power menu
     }

@@ -9,6 +9,7 @@
 
 /* Semi-transparent black background */
 window#waybar {
+    /* background-color: rgba(15, 15, 15, 0.65); */
     background-color: transparent;
     color: #c0caf5; /* Tokyo Night Foreground */
     transition-property: background-color;
@@ -16,6 +17,7 @@ window#waybar {
 }
 
 /* --- Island Layout --- */
+/* This moves your semi-transparent background to the individual sections */
 .modules-left,
 .modules-center,
 .modules-right {
@@ -27,6 +29,7 @@ window#waybar {
 /* Push the outer islands away from the screen edges */
 .modules-left {
     margin-left: 8px;
+    padding-right: 10px;
 }
 
 .modules-right {
@@ -99,5 +102,5 @@ window#waybar {
     color: #f7768e; /* Tokyo Night Red */
     font-size: 16px;
     padding-left: 5px;
-    padding-right: 14px;
+    padding-right: 10px;
 }
