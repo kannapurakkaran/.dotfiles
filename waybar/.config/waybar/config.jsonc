@@ -3,7 +3,6 @@
     "position": "top",
     "height": 34,
     "spacing": 4,
-    // Choose semi-transparent background in CSS, not here
     
     // --- LAYOUT ---
     "modules-left": [
@@ -39,7 +38,7 @@
 
     },
     "custom/weather": {
-	    "exec": "~/.config/waybar/weather.sh",
+	    "exec": "~/.config/waybar/scripts/weather.sh",
         "return-type": "custom",
         "interval": 1800, // Updates every 30 minutes
         "format": "{}",
