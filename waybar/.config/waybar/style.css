@@ -1,0 +1,103 @@
+/* --- Global Styles --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Semi-transparent black background */
+window#waybar {
+    background-color: transparent;
+    color: #c0caf5; /* Tokyo Night Foreground */
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* --- Island Layout --- */
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: rgba(15, 15, 15, 0.65);
+    border-radius: 16px;
+    margin-top: 8px; /* Space from the top edge of the screen */
+}
+
+/* Push the outer islands away from the screen edges */
+.modules-left {
+    margin-left: 8px;
+}
+
+.modules-right {
+    margin-right: 8px;
+}
+
+/* --- Left Section --- */
+#custom-arch {
+    color: #7aa2f7; /* Tokyo Night Blue */
+    font-size: 15px;
+    padding-left: 14px;
+    padding-right: 5px;
+}
+
+#workspaces button {
+    padding: 0;
+    margin: 7px 4px;
+    min-width: 20px;
+    min-height: 20px;
+    background-color: transparent;
+    border: 2px solid #565f89;
+    border-radius: 15px;
+    color: #c0caf5; /* Tokyo Night Darker Blue/Grey for inactive */
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.active {
+    background-color: #bb9af7;
+    border-color: #bb9af7;
+    color: #1a1b26; /* Tokyo Night Purple for active workspace */
+}
+
+#workspaces button.urgent {
+    border-color: #f7768e;
+    color: #f7768e; /* Tokyo Night Red for urgent */
+}
+
+/* --- Center Section --- */
+#clock {
+    color: #a9b1d6;
+    padding: 0 15px;
+}
+
+#custom-weather {
+    color: #a9b1d6; /* Tokyo Night Cyan */
+    padding: 0 15px;
+}
+
+/* --- Right Section --- */
+#tray {
+    padding: 0 10px;
+}
+
+#pulseaudio {
+    color: #9ece6a; /* Tokyo Night Green */
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+#pulseaudio.muted {
+    color: #f7768e; /* Tokyo Night Red */
+}
+
+#custom-power {
+    color: #f7768e; /* Tokyo Night Red */
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 14px;
+}

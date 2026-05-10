@@ -1,0 +1,10 @@
+anchor=top-right
+default-timeout=5000
+
+text-color=#c0caf5
+border-color=#7aa2f7
+background-color=#1a1b26
+padding=10
+border-size=2
+border-radius=10
+font=JetBrainsMono Nerd Font 11

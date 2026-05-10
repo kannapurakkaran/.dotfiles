@@ -1,0 +1,69 @@
+/* --- Global Styles --- */
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+}
+
+/* --- Dark Semi-Transparent Overlay --- */
+window {
+    background-color: rgba(10, 10, 10, 0.85);
+}
+
+/* --- Layout Grid */
+grid {
+    margin-top: 250px;
+    margin-bottom: 500px;
+    margin-left: 1070px;
+    margin-right: 1350px;
+}
+
+/* --- Base Button Styling --- */
+button {
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: #c0caf5; /* Tokyo Night Foreground */
+    font-size: 30px; /* Bumped up slightly for 4K */
+    font-weight: bold;
+    margin: 10px; /* Increased spacing between the buttons */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- Hover & Focus States --- */
+button:focus, 
+button:active, 
+button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    outline-style: none;
+}
+
+/* --- Tokyo Night Color Mapping per Button --- */
+
+#lock {
+    color: #bb9af7;
+}
+#lock:hover {
+    border: 2px solid #bb9af7;
+}
+
+#logout {
+    color: #7aa2f7;
+}
+#logout:hover {
+    border: 2px solid #7aa2f7;
+}
+
+#reboot {
+    color: #7dcfff;
+}
+#reboot:hover {
+    border: 2px solid #7dcfff;
+}
+
+#shutdown {
+    color: #f7768e;
+}
+#shutdown:hover {
+    border: 2px solid #f7768e;
+}

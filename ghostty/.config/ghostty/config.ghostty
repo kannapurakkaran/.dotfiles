@@ -1,0 +1,22 @@
+# Theme
+theme = TokyoNight
+
+# Font
+font-family = JetBrainsMono Nerd Font
+font-size = 12.5
+
+# Window
+window-padding-x = 8
+window-padding-y = 10
+background-opacity = 0.85
+confirm-close-surface = false
+resize-overlay = never
+mouse-hide-while-typing = true
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# Keybindings
+keybind = f11=toggle_fullscreen

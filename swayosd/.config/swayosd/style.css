@@ -1,0 +1,51 @@
+/* * SwayOSD - Ultra-Slim Tokyo Night Theme
+ */
+
+/* Main popup window */
+window#osd {
+    background-color: rgba(26, 27, 38, 0.8);
+    border: 1px solid #24283b;
+    border-radius: 999px;      
+    /* Drop top/bottom padding to 2px. Left/right stays at 12px */
+    padding: 2px 12px;         
+}
+
+/* Icon styling */
+image {
+    color: #c0caf5;
+    /* Force GTK to use a smaller icon size */
+    -gtk-icon-transform: scale(0.5);      
+    margin-right: 4px;
+    margin-top: -12px;
+    margin-bottom: -12px;
+}
+
+/* Text/Percentage styling */
+label {
+    color: #c0caf5;
+    font-size: 11px;           /* Shrink text to prevent it from stretching the height */
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Progress bar container */
+progressbar > trough {
+    background-color: #24283b;
+    border-radius: 999px;
+    min-height: 2px;           /* Reduced from 4px to 2px */
+    min-width: 120px;          /* Slightly narrower to match the slim profile */
+    margin: 0;                 /* Strip away any hidden margins */
+}
+
+/* Progress bar fill */
+progressbar > trough > progress {
+    background-color: #7aa2f7; 
+    border-radius: 999px;
+    min-height: 2px;           
+    margin: 0;
+}
+
+/* Muted state */
+progressbar:disabled > trough > progress {
+    background-color: #f7768e; 
+}

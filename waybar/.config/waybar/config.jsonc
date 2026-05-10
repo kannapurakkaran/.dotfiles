@@ -1,0 +1,73 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+        
+    // --- LAYOUT ---
+    "modules-left": [
+        "custom/arch",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock",
+        "custom/weather"
+    ],
+    "modules-right": [
+        "tray",
+        "pulseaudio",
+        "custom/power"
+    ],
+
+    // --- LEFT SECTION ---
+    "custom/arch": {
+        "format": "",
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "persistent-workspaces": {} // Ensures only active workspaces are shown dynamically
+    },
+
+    // --- CENTER SECTION ---
+    "clock": {
+	"format": "{:%b %d, %Y  %I:%M %p}    |",
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+
+    },
+    "custom/weather": {
+	    "exec": "~/.config/waybar/scripts/weather.sh",
+        "return-type": "custom",
+        "interval": 1800, // Updates every 30 minutes
+        "format": "{}",
+        "tooltip": false
+    },
+
+    // --- RIGHT SECTION ---
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5 // Controls volume on scroll
+    },
+    "custom/power": {
+        "format": "   ",
+        "tooltip": false,
+        "on-click": "wlogout -p layer-shell -b 2" // Triggers a power menu
+    }
+}

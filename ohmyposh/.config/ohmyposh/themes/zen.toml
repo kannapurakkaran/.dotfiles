@@ -1,0 +1,133 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+# console_title_template = " {{ .Folder }} :: {{if .Root}}Admin{{end}}"
+final_space = true
+version = 4
+# terminal_background = "p:t-background"
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = '#bb9af7'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}#bb9af7{{end}}']
+
+# [transient_prompt]
+#   background = "transparent"
+#   foreground = "#bb9af7" # Tokyo Night Purple
+#   template = "❯ "
+
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = "text"
+    style = "plain"
+    foreground = "#565f89" # Tokyo Night Muted Blue/Gray
+    background = "transparent"
+    template = "╭─"
+
+  [[blocks.segments]]
+    type = "os"
+    style = "plain"
+    foreground = "#7aa2f7" # Tokyo Night Blue
+    background = "transparent"
+    template = "{{.Icon}} "
+
+  [[blocks.segments]]
+    type = "path"
+    style = "plain"
+    foreground = "#7dcfff" # Tokyo Night Cyan
+    background = "transparent"
+    template = "{{ .Path }} "
+    
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = "full"
+
+  [[blocks.segments]]
+    type = "git"
+    style = "plain"
+    foreground = "#bb9af7" # Tokyo Night Purple
+    background = "transparent"
+    template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{end}}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+    
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      fetch_status = true
+      branch_icon = " "
+      branch_ahead_icon = "⇡"
+      branch_behind_icon = "⇣"
+
+  [[blocks.segments]]
+    type = "node"
+    style = "plain"
+    foreground = "#9ece6a" # Tokyo Night Green
+    background = "transparent"
+    template = " {{ .Full }} "
+
+  [[blocks.segments]]
+    type = "python"
+    style = "plain"
+    foreground = "#e0af68" # Tokyo Night Yellow
+    background = "transparent"
+    template = " {{ .Full }} "
+
+  [[blocks.segments]]
+    type = "go"
+    style = "plain"
+    foreground = "#2ac3de" # Tokyo Night Teal
+    background = "transparent"
+    template = "󰟓 {{ .Full }} "
+
+  [[blocks.segments]]
+    type = "rust"
+    style = "plain"
+    foreground = "#f7768e" # Tokyo Night Red
+    background = "transparent"
+    template = " {{ .Full }} "
+
+[[blocks]]
+  type = "prompt"
+  alignment = "right"
+
+  # Elapsed Execution Time
+  [[blocks.segments]]
+    type = "executiontime"
+    style = "plain"
+    foreground = "#ff9e64" # Tokyo Night Orange
+    background = "transparent"
+    template = "{{ .FormattedMs }} "
+    
+    [blocks.segments.options]
+      style = "austin"
+
+    [blocks.segments.properties]
+      always_enabled = true
+      threshold = 2000
+
+[[blocks]]
+  type = "prompt"
+  alignment = "left"
+  newline = true
+
+  # 1. Bottom Connector Line
+  [[blocks.segments]]
+    type = "text"
+    style = "plain"
+    foreground = "#565f89" # Tokyo Night Muted Blue/Gray
+    background = "transparent"
+    template = "╰─"
+
+  # 2. Command Input Indicator
+  [[blocks.segments]]
+    type = "text"
+    style = "plain"
+    foreground = "#bb9af7" # Tokyo Night Foreground (White/Blueish)
+    background = "transparent"
+    template = "❯ "
